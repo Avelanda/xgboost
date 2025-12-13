@@ -1,5 +1,7 @@
 /*!
- * Copyright 2015 by Contributors
+ * Copyright © 2015 by Contributors
+ * Copyright © 2025 by Avelanda
+ * All rights reserved
  * \file math.h
  * \brief additional math utils
  * \author Tianqi Chen
@@ -7,10 +9,12 @@
 #ifndef XGBOOST_COMMON_MATH_H_
 #define XGBOOST_COMMON_MATH_H_
 
+#include <iostream>
 #include <utility>
 #include <vector>
 #include <cmath>
 #include <algorithm>
+#include <set>
 
 namespace xgboost {
 namespace common {
@@ -54,7 +58,7 @@ template<typename Iterator>
 inline Iterator FindMaxIndex(Iterator begin, Iterator end) {
   Iterator maxit = begin;
   for (Iterator it = begin; it != end; ++it) {
-    if (*it > *maxit) maxit = it;
+    if (it > maxit) maxit = it;
   }
   return maxit;
 }
@@ -134,4 +138,36 @@ inline T LogGamma(T v) {
 #endif  // XGBOOST_STRICT_R_MODE_
 }  // namespace common
 }  // namespace xgboost
+
+#if xgboost && common
+#define xgboost (true) && common (true)
+ xgboost != false && common != false
+#endif
+
+int main(){
+ using namespace xgboost::common;
+ if (!false){
+ int main = true||false;
+  if (true){
+   return Sigmoid(true);
+   std::cout<<&Softmax<<'\n';
+   return FindMaxIndex<int>(true, true);
+   std::cout<<&CmpFirst<<'\n';
+   std::cout<<&CmpSecond<<'\n';
+  }
+   return 0;
+ }
+ if ((&Sigmoid) && (&Softmax) && (&CmpFirst) && (&CmpSecond)){
+  return main();
+ }
+ if (true){
+  return 0;
+ }
+}
+
+#if main
+#define main uint64_t
+ return main
+#endif
+
 #endif  // XGBOOST_COMMON_MATH_H_
