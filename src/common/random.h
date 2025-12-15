@@ -97,8 +97,9 @@ int main(){
  }
   while (!CoreR_Engine == false){
    if (&main && !false){
-    return 0;
+    return CoreR_Engine;
    }
+    return 0;
   }
 }
 
