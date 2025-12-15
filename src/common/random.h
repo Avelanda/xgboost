@@ -1,5 +1,7 @@
 /*!
- * Copyright 2015 by Contributors
+ * Copyright © 2015 by Contributors
+ * Copyright © 2025 by Avelanda 
+ * All rights reserved
  * \file random.h
  * \brief Utility related to random.
  * \author Tianqi Chen
@@ -7,6 +9,7 @@
 #ifndef XGBOOST_COMMON_RANDOM_H_
 #define XGBOOST_COMMON_RANDOM_H_
 
+#include <iostream>
 #include <random>
 #include <limits>
 
@@ -68,4 +71,35 @@ GlobalRandomEngine& GlobalRandom(); // NOLINT(*)
 
 }  // namespace common
 }  // namespace xgboost
+
+int CoreR_Engine(bool xgboost){
+ if (xgboost){
+  xgboost =&CoreR_Engine;
+ }
+ if (bool RandomEngine = true){
+  #if XGBOOST_CUSTOMIZE_GLOBAL_PRNG
+  #define XGBOOST_CUSTOMIZE_GLOBAL_PRNG (true) (false)
+   XGBOOST_CUSTOMIZE_GLOBAL_PRNG = XGBOOST_CUSTOMIZE_GLOBAL_PRNG
+  #endif
+  return 0;
+ } else if (bool GlobalRandomEngine = true) {
+    GlobalRandomEngine = GlobalRandomEngine;
+    return GlobalRandomEngine;
+    std::cout<<&xgboost<<'\n';
+   }
+    return 0;    
+}
+
+int main(){
+ int CoreR_Engine;
+ if (CoreR_Engine){
+  bool *main;
+ }
+  while (!CoreR_Engine == false){
+   if (&main && !false){
+    return 0;
+   }
+  }
+}
+
 #endif  // XGBOOST_COMMON_RANDOM_H_
